@@ -81,6 +81,12 @@
             android:fragment="com.raven.lair.fragments.NetworkTraffic"
             android:title="@string/traffic_title" />
 
+    <Preference
+         android:key="carrierlabel_settings"
+         android:title="@string/carrier_label_category_title"
+         android:summary="@string/carrier_label_category_summary"
+         android:fragment="com.raven.lair.fragments.CarrierLabelSettings" />
+
        <PreferenceCategory
             android:title="@string/statusbar_battery"> 
 	   <ListPreference
