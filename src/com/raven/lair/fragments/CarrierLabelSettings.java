@@ -50,7 +50,7 @@ import com.android.settings.Utils;
 
 import com.android.settings.custom.preference.SystemSettingSwitchPreference;
 import com.android.settings.custom.preference.CustomSeekBarPreference;
-import com.android.settings.custom.preference.colorpicker.ColorPickerPreference;
+import com.android.settings.custom.colorpicker.ColorPickerPreference;
 import com.android.internal.logging.nano.MetricsProto;
 
 import java.util.ArrayList;
