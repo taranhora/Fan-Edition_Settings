@@ -352,4 +352,8 @@
     <!-- Statusbar brightness control -->
     <string name="status_bar_brightness_control_title">Statusbar Brightness Control</string>
     <string name="status_bar_brightness_control_summary">Adjust brightness by sliding across statusbar</string>
+
+    <!-- Charging animation -->
+    <string name="lockscreen_charging_animation_title">LS Charging animation</string>
+    <string name="lockscreen_charging_animation_summary">Display a Lottie animation when the device is charging</string>
 </resources>
