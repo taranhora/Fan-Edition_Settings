@@ -48,7 +48,7 @@
     <string name="fingerprint_prefs_summary">Tweaks specific to the fingerprint scanner</string>
     <string name="lockscreen_items_title">Lockscreen items</string>
     <string name="lockscreen_items_summary">Customize the lockscreen</string>
-
+    <string name="lockscreen_security">Lockscreen Security</string>
     <!-- Statusbar -->
     <string name="battery_options_title">Battery options</string>
     <string name="battery_options_summary">Customize the statusbar battery</string>
@@ -188,4 +188,7 @@
     <string name="incall_vibrate_connect_title">Vibrate on connect</string>
     <string name="incall_vibrate_call_wait_title">Vibrate on call waiting</string>
     <string name="incall_vibrate_disconnect_title">Vibrate on disconnect</string>
+    <!-- Fingerprint unlock -->
+    <string name="fp_unlock_keystore_title">Force FP authentication</string>
+    <string name="fp_unlock_keystore_summary">Unlock device with fingerprint after reboot or lockdown</string>
 </resources>
