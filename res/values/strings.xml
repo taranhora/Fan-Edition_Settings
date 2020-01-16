@@ -417,4 +417,7 @@
     <string name="lock_clock_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
     <string name="lock_clock_font_gobold">GoBold Light</string>
 
+    <!-- Lock icon -->
+    <string name="hide_lockicon_title">Hide lock icon</string>
+    <string name="hide_lockicon_summary">Hide the lock icon on lockscreen</string>
 </resources>
