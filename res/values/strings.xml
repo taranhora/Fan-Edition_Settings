@@ -62,10 +62,16 @@
     <string name="quicksettings_summary">Configure the layout of the quick settings area</string>
     <string name="traffic_title">Traffic indicators</string>
     <string name="traffic_summary">Enable and configure the traffic indicators</string>
+    <string name="statusbar_icon">Statusbar Icon</string>
 
     <!-- Navigation -->
     <string name="buttons_title">Buttons</string>
     <string name="buttons_summary">Configure volume rocker options</string>
     <string name="navigation_options_title">Navigation</string>
     <string name="navigation_options_summary">Configure navigation options</string>
+
+    <!-- VoLTE switch -->
+    <string name="volte_switch_title">VoLTE icon</string>
+    <string name="volte_switch_summary">Display VoLTE icon</string>
+
 </resources>
