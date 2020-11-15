@@ -1,3 +1,4 @@
+
 /*
  * Copyright (C) 2018-2019 The Dirty Unicorns Project
  *
@@ -60,7 +61,7 @@ public class NavigationOptions extends SettingsPreferenceFragment
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.CORVUS;
+        return MetricsProto.MetricsEvent.CUSTOM_SETTINGS;
     }
 
     @Override

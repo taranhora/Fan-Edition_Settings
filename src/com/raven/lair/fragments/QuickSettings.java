@@ -58,7 +58,7 @@ public class QuickSettings extends SettingsPreferenceFragment
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.CORVUS;
+        return MetricsProto.MetricsEvent.CUSTOM_SETTINGS;
     }
 
     public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =

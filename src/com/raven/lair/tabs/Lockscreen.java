@@ -27,7 +27,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
 
-import com.android.internal.util.corvus.Utils;
+import com.android.internal.util.custom.Utils;
 
 public class Lockscreen extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -74,6 +74,6 @@ public class Lockscreen extends SettingsPreferenceFragment
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.CORVUS;
+        return MetricsProto.MetricsEvent.CUSTOM_SETTINGS;
     }
 }

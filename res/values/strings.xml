@@ -17,11 +17,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Dirty Tweaks -->
-    <string name="ravenlair_title">Raven\'s Lair</string>
-    <string name="ravenlair_summary">Unleash the Raven</string>
+    <string name="ravenlair_title">Pixel\'s Den</string>
+    <string name="ravenlair_summary">Your Dessert Here</string>
 
     <!-- The Team -->
     <string name="dialog_team_title">The team</string>
+    <string name="leaddeveloper_title">Lead Developer</string>
     <string name="developer_title">Developer</string>
     <string name="maintainer_title">Maintainer</string>
     <string name="contributor_title">Contributor</string>

@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?android:colorPrimary"
-        android:elevation="8dp"
+        android:elevation="0.0dp"
         app:corvus_mode="spread"
         android:layout_gravity="bottom"
         android:orientation="horizontal"
