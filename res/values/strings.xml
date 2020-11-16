@@ -62,13 +62,17 @@
     <string name="quicksettings_summary">Configure the layout of the quick settings area</string>
     <string name="traffic_title">Traffic indicators</string>
     <string name="traffic_summary">Enable and configure the traffic indicators</string>
-    <string name="statusbar_icon">Statusbar Icon</string>
 
     <!-- Navigation -->
     <string name="buttons_title">Buttons</string>
     <string name="buttons_summary">Configure volume rocker options</string>
     <string name="navigation_options_title">Navigation</string>
     <string name="navigation_options_summary">Configure navigation options</string>
+
+    <!-- Custom Categories -->
+    <string name="statusbar_icon">Statusbar Icon</string>
+    <string name="lockscreen_gestures">Lockscreen Gestures</string>
+    <string name="statusbar_gestures">Status Bar Gestures</string>
 
     <!-- VoLTE switch -->
     <string name="volte_switch_title">VoLTE icon</string>
@@ -100,5 +104,13 @@
     <string name="vowifi_icon_simple1">Simple1 Icon</string>
     <string name="vowifi_icon_simple2">Simple2 Icon</string>
     <string name="vowifi_icon_simple3">Simple3 Icon</string>
+
+    <!-- Statusbar double tap to sleep -->
+    <string name="double_tap_to_sleep_title">Status bar double tap to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
+
+    <!-- Lockscreen double tap to sleep -->
+    <string name="double_tap_sleep_lockscreen_title">Lockscreen double tap to sleep</string>
+    <string name="double_tap_sleep_lockscreen_summary">Double tap anywhere on the lockscreen to put the device to sleep</string>
 
 </resources>
