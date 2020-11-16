@@ -27,7 +27,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
 
-import com.android.internal.util.custom.Utils;
+//import com.android.internal.util.custom.Utils;
 
 public class Lockscreen extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
