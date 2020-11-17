@@ -73,6 +73,7 @@
     <string name="statusbar_icon">Statusbar Icon</string>
     <string name="lockscreen_gestures">Lockscreen Gestures</string>
     <string name="statusbar_gestures">Status Bar Gestures</string>
+    <string name="system_blur">System Blur</string>
 
     <!-- VoLTE switch -->
     <string name="volte_switch_title">VoLTE icon</string>

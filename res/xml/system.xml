@@ -15,5 +15,13 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+ 
+   <PreferenceCategory
+            android:title="@string/system_blur">
+  	<SwitchPreference
+            android:key="enable_blurs_on_windows"
+            android:title="@string/enable_blurs_on_windows_title"
+            android:summary="@string/enable_blurs_on_windows_summary" />
+    </PreferenceCategory>
 
 </PreferenceScreen>
