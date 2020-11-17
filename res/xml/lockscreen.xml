@@ -16,7 +16,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-<PreferenceCategory
+   <PreferenceCategory
             android:title="@string/lockscreen_gestures">
 	    <com.corvus.support.preferences.SystemSettingSwitchPreference
 	         android:key="double_tap_sleep_lockscreen"
@@ -25,4 +25,12 @@
 	         android:defaultValue="true" />
 	    </PreferenceCategory>
 
+   <PreferenceCategory
+            android:title="@string/misc">
+            <com.corvus.support.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_battery_info"
+            android:title="@string/lockscreen_battery_info_title"
+            android:summary="@string/lockscreen_battery_info_summary"
+            android:defaultValue="true" />
+            </PreferenceCategory>
 </PreferenceScreen>
