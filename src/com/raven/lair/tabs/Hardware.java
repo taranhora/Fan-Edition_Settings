@@ -17,8 +17,10 @@
 package com.raven.lair.tabs;
 
 import android.os.Bundle;
+import android.provider.Settings;
 import android.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.Preference;
+import androidx.preference.ListPreference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceFragment;
@@ -33,11 +35,21 @@ public class Hardware extends SettingsPreferenceFragment
     private static final String BUTTONS_CATEGORY = "buttons_category";
     private static final String NAVIGATION_CATEGORY = "navigation_category";
     private static final String POWERMENU_CATEGORY = "powermenu_category";
+    private static final String KEY_TORCH_LONG_PRESS_POWER_TIMEOUT =
+            "torch_long_press_power_timeout";
+
+    private ListPreference mTorchLongPressPowerTimeout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.hardware);
+       mTorchLongPressPowerTimeout = findPreference(KEY_TORCH_LONG_PRESS_POWER_TIMEOUT);
+        mTorchLongPressPowerTimeout.setOnPreferenceChangeListener(this);
+        int TorchTimeout = Settings.System.getInt(getContentResolver(),
+                Settings.System.TORCH_LONG_PRESS_POWER_TIMEOUT, 0);
+        mTorchLongPressPowerTimeout.setValue(Integer.toString(TorchTimeout));
+        mTorchLongPressPowerTimeout.setSummary(mTorchLongPressPowerTimeout.getEntry());
 
         Preference Buttons = findPreference(BUTTONS_CATEGORY);
         if (!getResources().getBoolean(R.bool.has_buttons)) {
@@ -65,10 +77,20 @@ public class Hardware extends SettingsPreferenceFragment
         super.onPause();
     }
 
-
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         final String key = preference.getKey();
-        return false;
+	if (preference == mTorchLongPressPowerTimeout) {
+            String TorchTimeout = (String) objValue;
+            int TorchTimeoutValue = Integer.parseInt(TorchTimeout);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.TORCH_LONG_PRESS_POWER_TIMEOUT, TorchTimeoutValue);
+            int TorchTimeoutIndex = mTorchLongPressPowerTimeout
+                    .findIndexOfValue(TorchTimeout);
+            mTorchLongPressPowerTimeout
+                    .setSummary(mTorchLongPressPowerTimeout.getEntries()[TorchTimeoutIndex]);
+            return true;
+        }
+            return false;
     }
 
 
