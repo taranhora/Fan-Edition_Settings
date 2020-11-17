@@ -76,6 +76,7 @@
     <string name="system_blur">System Blur</string>
     <string name="misc">Miscellaneous</string>
     <string name="buttons">Buttons</string>
+    <string name="qs">Quick Settings</string>
 
     <!-- VoLTE switch -->
     <string name="volte_switch_title">VoLTE icon</string>
@@ -130,4 +131,7 @@
     <string name="torch_long_press_power_timeout_5min">5 minutes</string>
     <string name="torch_long_press_power_timeout_10min">10 minutes</string>
 
+   <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
+    <string name="quick_settings_vibrate_summary">Vibrate when touching QS tiles</string>
 </resources>
