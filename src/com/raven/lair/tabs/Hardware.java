@@ -22,7 +22,8 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceFragment;
-
+import android.provider.Settings;
+import androidx.preference.ListPreference;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -33,6 +34,11 @@ public class Hardware extends SettingsPreferenceFragment
     private static final String BUTTONS_CATEGORY = "buttons_category";
     private static final String NAVIGATION_CATEGORY = "navigation_category";
     private static final String POWERMENU_CATEGORY = "powermenu_category";
+
+    private static final String KEY_TORCH_LONG_PRESS_POWER_TIMEOUT =
+            "torch_long_press_power_timeout";
+
+    private ListPreference mTorchLongPressPowerTimeout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -74,9 +80,8 @@ public class Hardware extends SettingsPreferenceFragment
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         final String key = preference.getKey();
-        return false;
 	if (preference == mTorchLongPressPowerTimeout) {
-            String TorchTimeout = (String) newValue;
+            String TorchTimeout = (String) objValue;
             int TorchTimeoutValue = Integer.parseInt(TorchTimeout);
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.TORCH_LONG_PRESS_POWER_TIMEOUT, TorchTimeoutValue);
@@ -86,6 +91,7 @@ public class Hardware extends SettingsPreferenceFragment
                     .setSummary(mTorchLongPressPowerTimeout.getEntries()[TorchTimeoutIndex]);
             return true;
         }
+     return false;
     }
 
 
