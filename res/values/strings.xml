@@ -141,4 +141,9 @@
     <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
     <string name="global_actions_advanced_reboot_summary">Show options for recovery and bootloader</string>
     <string name="power_menu_advanced_category">Advanced</string>
+
+    <!-- FOD icon picker -->
+    <string name="fod_icon_picker_title">Fingerprint icon</string>
+    <string name="fod_icon_picker_summary">Choose your favorite fingerprint icon</string>
+    <string name="fod_icon_picker_footer">In order to add your own icon, select the top left icon and use the OnePlus 6T FP Customizer app to select the icon you want.</string>
 </resources>

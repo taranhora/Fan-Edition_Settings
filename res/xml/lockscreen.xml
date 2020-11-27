@@ -43,6 +43,13 @@
 	android:defaultValue="false" />
 	</PreferenceCategory>
 
+        <!-- FOD icon picker -->
+        <Preference
+            android:key="fod_icon_picker_category"
+            android:title="@string/fod_icon_picker_title"
+            android:summary="@string/fod_icon_picker_summary"
+            android:fragment="com.raven.lair.fragments.FODIconPickerFragment" />
+
     <!-- FOD recognizing animation -->
     <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:key="fod_recognizing_animation"
