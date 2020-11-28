@@ -32,8 +32,6 @@ import com.android.settings.SettingsPreferenceFragment;
 public class Hardware extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
-    private static final String BUTTONS_CATEGORY = "buttons_category";
-    private static final String NAVIGATION_CATEGORY = "navigation_category";
     private static final String POWERMENU_CATEGORY = "powermenu_category";
     private static final String KEY_TORCH_LONG_PRESS_POWER_TIMEOUT =
             "torch_long_press_power_timeout";
@@ -50,16 +48,6 @@ public class Hardware extends SettingsPreferenceFragment
                 Settings.System.TORCH_LONG_PRESS_POWER_TIMEOUT, 0);
         mTorchLongPressPowerTimeout.setValue(Integer.toString(TorchTimeout));
         mTorchLongPressPowerTimeout.setSummary(mTorchLongPressPowerTimeout.getEntry());
-
-        Preference Buttons = findPreference(BUTTONS_CATEGORY);
-        if (!getResources().getBoolean(R.bool.has_buttons)) {
-            getPreferenceScreen().removePreference(Buttons);
-        }
-
-        Preference Navigation = findPreference(NAVIGATION_CATEGORY);
-        if (!getResources().getBoolean(R.bool.has_navigation)) {
-            getPreferenceScreen().removePreference(Navigation);
-        }
 
         Preference PowerMenu = findPreference(POWERMENU_CATEGORY);
         if (!getResources().getBoolean(R.bool.has_powermenu)) {
