@@ -37,19 +37,33 @@
             android:defaultValue="false" />
     </PreferenceCategory>
 
+    <!-- Gvisual mod -->
+    <PreferenceCategory 
+        android:key="gvisual_category"
+        android:title="@string/gvisual_title">
+
+        <PreferenceScreen
+            android:key="gvisual"
+            android:title="@string/gvisual_title"
+            android:summary="@string/gvisual_summary"
+            android:fragment="com.raven.lair.fragments.GvisualSettings" />
+
+    </PreferenceCategory>
+
     <PreferenceCategory
-        android:title="@string/heads_up" >
+        android:title="@string/misc" >
 
        <com.android.settings.custom.preference.SystemSettingSwitchPreference
         android:key="notification_sound_vib_screen_on" 
         android:title="@string/notification_sound_vib_screen_on_title" 
         android:summary="@string/notification_sound_vib_screen_on_summary"
         android:defaultValue="true" />
-    </PreferenceCategory>
 
         <com.android.settings.custom.preference.GlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
             android:title="@string/wakeup_when_plugged_unplugged_title"
             android:summary="@string/wakeup_when_plugged_unplugged_summary"
             android:defaultValue="true" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
