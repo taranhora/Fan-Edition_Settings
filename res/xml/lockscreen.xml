@@ -48,7 +48,6 @@
         android:title="@string/fp_unlock_keystore_title"
         android:summary="@string/fp_unlock_keystore_summary"
 	android:defaultValue="false" />
-	</PreferenceCategory>
 
         <!-- FOD icon picker -->
         <Preference
@@ -67,14 +66,14 @@
             android:entryValues="@array/fod_pressed_color_values"
             android:defaultValue="@*android:integer/config_fod_pressed_color" />
 
-    <!-- FOD recognizing animation -->
-    <com.android.settings.custom.preference.SystemSettingSwitchPreference
+        <!-- FOD recognizing animation -->
+       <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:key="fod_recognizing_animation"
             android:title="@string/fod_recog_animation"
             android:summary="@string/fod_recog_animation_summary"
             android:defaultValue="false" />
 
-    <com.android.settings.custom.preference.SystemSettingListPreference 
+       <com.android.settings.custom.preference.SystemSettingListPreference 
             android:key="fod_recognizing_animation_list" 
             android:title="@string/fod_recog_animation_effect_title" 
             android:summary="%s" 
@@ -82,4 +81,13 @@
             android:entryValues="@array/fod_recognizing_animation_values" 
             android:defaultValue="0"
             android:dependency="fod_recognizing_animation" />            
+   
+       <com.android.settings.custom.preference.SystemSettingSwitchPreference
+      	    android:key="fod_gesture"
+            android:title="@string/fod_gesture_title"
+            android:summary="@string/fod_gesture_summary"
+            android:defaultValue="true"
+            settings:controller="com.raven.lair.fargments.FodGesturePreferenceController" />
+
+        </PreferenceCategory>
 </PreferenceScreen>
