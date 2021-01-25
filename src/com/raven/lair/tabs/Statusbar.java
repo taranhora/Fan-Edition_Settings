@@ -96,7 +96,7 @@ public class Statusbar extends SettingsPreferenceFragment
     }
 
    @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
         final String key = preference.getKey();
        ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mBatteryStyle) {
