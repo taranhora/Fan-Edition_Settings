@@ -17,6 +17,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
  <PreferenceCategory
+            android:icon="@drawable/ic_buttons"
             android:title="@string/buttons">
 	    <com.android.settings.custom.preference.SecureSettingSwitchPreference
 	        android:key="advanced_reboot"
@@ -43,7 +44,8 @@
 	</PreferenceCategory>
 
 <PreferenceCategory
-            android:title="@string/buttons">
+            android:icon="@drawable/ic_volume_buttons" 
+            android:title="@string/volume_buttons">
              <com.android.settings.custom.preference.SystemSettingSwitchPreference
 	       android:key="volume_button_music_control"
 	       android:summary="@string/volume_rocker_music_controls_summary"

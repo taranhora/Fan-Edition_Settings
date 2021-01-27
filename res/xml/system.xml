@@ -18,6 +18,7 @@
 
     <PreferenceCategory
         android:key="incall_vib_options"
+        android:icon="@drawable/ic_vibrations"
         android:title="@string/incall_vibration_category" >
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
@@ -37,8 +38,9 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/heads_up" >
-
+	 android:icon="@drawable/ic_notif"    
+         android:title="@string/heads_up" >
+    
        <com.android.settings.custom.preference.SystemSettingSwitchPreference
         android:key="notification_sound_vib_screen_on" 
         android:title="@string/notification_sound_vib_screen_on_title" 

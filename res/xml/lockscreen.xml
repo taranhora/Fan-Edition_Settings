@@ -17,6 +17,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
    <PreferenceCategory
+             android:icon="@drawable/ic_gestures"
             android:title="@string/lockscreen_gestures">
 	    <com.android.settings.custom.preference.SystemSettingSwitchPreference
 	         android:key="double_tap_sleep_lockscreen"
@@ -26,6 +27,7 @@
 	    </PreferenceCategory>
 
    <PreferenceCategory
+            android:icon="@drawable/ic_misc"
             android:title="@string/misc">
             <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:key="lockscreen_battery_info"
@@ -42,6 +44,7 @@
 	    </PreferenceCategory>
 
   <PreferenceCategory
+	  android:icon="@drawable/ic_security"
 	  android:title="@string/lockscreen_security">
 	<com.android.settings.custom.preference.SystemSettingSwitchPreference
 	android:key="fp_unlock_keystore"
