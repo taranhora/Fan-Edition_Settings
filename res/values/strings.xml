@@ -44,7 +44,7 @@
     <string name="qs">Quick Settings</string>
     <string name="lockscreen_security">Lockscreen Security</string>
     <string name="heads_up">Heads Up Customisation</string>
-    <string name="volume">Volume Buttons</string>
+    <string name="volume_buttons">Volume Buttons</string>
     <string name="statusbar_clock">Clock Customisations</string>
     <string name="statusbar_battery">Battery Icon</string>
 
