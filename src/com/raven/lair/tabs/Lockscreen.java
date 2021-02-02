@@ -1,4 +1,3 @@
-
 /*
  * Copyright (C) 2017-2019 The Dirty Unicorns Project
  *
@@ -29,6 +28,7 @@ import android.content.om.OverlayInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.UserHandle;
@@ -72,7 +72,11 @@ import java.util.List;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-//import com.android.internal.util.custom.Utils;
+import com.android.settings.custom.preference.SystemSettingSwitchPreference;
+
+import com.android.settings.custom.colorpicker.ColorPickerPreference;
+
+import com.android.internal.util.custom.CustomUtils;
 
 public class Lockscreen extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -83,6 +87,8 @@ public class Lockscreen extends SettingsPreferenceFragment
     private static final String FOD_DISABLED_BY_PROP ="ro.fingerprint.inscreen_disabled";
     private static final String FOD_TWEAKS = "fod_tweaks";
     private static final String AOD_SCHEDULE_KEY = "always_on_display_schedule";
+    private static final String AMBIENT_ICONS_COLOR = "ambient_icons_color";
+    private static final String AMBIENT_ICONS_LOCKSCREEN = "ambient_icons_lockscreen";
 
     static final int MODE_DISABLED = 0;
     static final int MODE_NIGHT = 1;
@@ -95,6 +101,8 @@ public class Lockscreen extends SettingsPreferenceFragment
     private ContentResolver mResolver;
     private Context mContext;
     private ListPreference mLockClockStyles;
+    private ColorPickerPreference mAmbientIconsColor;
+    private SystemSettingSwitchPreference mAmbientIconsLockscreen;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -110,6 +118,19 @@ public class Lockscreen extends SettingsPreferenceFragment
         mLockClockStyles.setValue(mLockClockStylesValue);
         mLockClockStyles.setSummary(mLockClockStyles.getEntry());
         mLockClockStyles.setOnPreferenceChangeListener(this);
+        mAmbientIconsLockscreen = (SystemSettingSwitchPreference) findPreference(AMBIENT_ICONS_LOCKSCREEN);
+        mAmbientIconsLockscreen.setChecked((Settings.System.getInt(resolver,
+                Settings.System.AMBIENT_ICONS_LOCKSCREEN, 0) == 1));
+        mAmbientIconsLockscreen.setOnPreferenceChangeListener(this);
+
+        // Ambient Icons Color
+        mAmbientIconsColor = (ColorPickerPreference) findPreference(AMBIENT_ICONS_COLOR);
+        int intColor = Settings.System.getInt(getContentResolver(),
+                Settings.System.AMBIENT_ICONS_COLOR, Color.WHITE);
+        String hexColor = String.format("#%08x", (0xffffffff & intColor));
+        mAmbientIconsColor.setNewPreviewColor(intColor);
+        mAmbientIconsColor.setSummary(hexColor);
+        mAmbientIconsColor.setOnPreferenceChangeListener(this);
         if (!isFODdevice()) {
             prefScreen.removePreference(findPreference(FOD_TWEAKS));
            }
@@ -156,11 +177,26 @@ public class Lockscreen extends SettingsPreferenceFragment
 
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
         final String key = preference.getKey();
         if (preference == mLockClockStyles) {
             setLockScreenCustomClockFace((String) objValue);
             int index = mLockClockStyles.findIndexOfValue((String) objValue);
             mLockClockStyles.setSummary(mLockClockStyles.getEntries()[index]);
+            return true;
+        } else if (preference == mAmbientIconsLockscreen) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.AMBIENT_ICONS_LOCKSCREEN, value ? 1 : 0);
+            CustomUtils.showSystemUiRestartDialog(getContext());
+            return true;
+        } else if (preference == mAmbientIconsColor) {
+            String hex = ColorPickerPreference.convertToARGB(Integer
+                .parseInt(String.valueOf(objValue)));
+            mAmbientIconsColor.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(resolver,
+                    Settings.System.AMBIENT_ICONS_COLOR, intHex);
             return true;
         }
         return false;
