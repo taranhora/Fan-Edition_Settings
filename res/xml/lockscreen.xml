@@ -28,6 +28,15 @@
 	    </PreferenceCategory>
 
    <PreferenceCategory
+            android:title="@string/ambient_settings">
+    <Preference
+        android:key="always_on_display_schedule"
+        android:title="@string/always_on_display_schedule_title"
+        android:fragment="com.raven.lair.fragments.AODSchedule" />
+
+            </PreferenceCategory>
+
+   <PreferenceCategory
             android:title="@string/misc">
             <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:key="lockscreen_battery_info"

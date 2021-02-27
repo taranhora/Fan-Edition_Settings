@@ -93,6 +93,8 @@ public class Lockscreen extends SettingsPreferenceFragment
         final PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
         mContext = getActivity();
+        mAODPref = findPreference(AOD_SCHEDULE_KEY);
+        updateAlwaysOnSummary();
         mLockClockStyles = (ListPreference) findPreference(CUSTOM_CLOCK_FACE);
         String mLockClockStylesValue = getLockScreenCustomClockFace();
         mLockClockStyles.setValue(mLockClockStylesValue);
@@ -111,7 +113,24 @@ public class Lockscreen extends SettingsPreferenceFragment
     @Override
     public void onResume() {
         super.onResume();
+        updateAlwaysOnSummary();
     }
+
+    private void updateAlwaysOnSummary() {
+        if (mAODPref == null) return;
+        int mode = Settings.Secure.getIntForUser(getActivity().getContentResolver(),
+                Settings.Secure.DOZE_ALWAYS_ON_AUTO_MODE, 0, UserHandle.USER_CURRENT);
+        switch (mode) {
+            case 0:
+                mAODPref.setSummary(R.string.disabled);
+                break;
+            case 1:
+                mAODPref.setSummary(R.string.night_display_auto_mode_twilight);
+                break;
+            case 2:
+                mAODPref.setSummary(R.string.night_display_auto_mode_custom);
+                break;
+        }
 
     @Override
     public void onPause() {

@@ -49,6 +49,7 @@
     <string name="statusbar_battery">Battery Icon</string>
     <string name="gestures_title">Nav Bar Gesture Customisations</string>
     <string name="gestures_summary">Take Your Pill</string>
+    <string name="ambient_settings">Ambient Settings</string>
 
     <!-- VoLTE switch -->
     <!-- 4G LTE switch -->
@@ -419,4 +420,10 @@
     <!-- Show Statusbar on Lockscreen -->
     <string name="lockscreen_status_bar_title">Status bar</string>
     <string name="lockscreen_status_bar_summary">Display status bar on the lockscreen</string>
+
+    <!-- AOD Schedule -->
+    <string name="always_on_display_schedule_title">Always on display schedule</string>
+    <string name="always_on_display_schedule_sunset">Sunset</string>
+    <string name="always_on_display_schedule_sunrise">Sunrise</string>
+    <string name="disabled">Disabled</string>
 </resources>
