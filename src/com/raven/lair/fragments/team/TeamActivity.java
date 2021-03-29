@@ -51,7 +51,10 @@ public class TeamActivity extends Activity {
 
        setTeamMember("Aryan Gupta", getString(R.string.leaddeveloper_title), "darkbeast69", "heisinbug",
                 R.drawable.aryan);
-        setTeamMember("Nitesh Kumar", getString(R.string.developer_title)
+       setTeamMember("Taran Hora", getString(R.string.developer_title)
+                + " / " + getString(R.string.contributor_title), "taranhora", "taran107",
+                R.drawable.taran);
+       setTeamMember("Nitesh Kumar", getString(R.string.developer_title)
                 + " / " + getString(R.string.contributor_title), "niteshkumar2000", "Niteshkumar15",
                 R.drawable.nitesh);
         setTeamMember("Ralf979", getString(R.string.developer_title), "ralf979", "Ralf979",
