@@ -44,7 +44,7 @@
     <string name="qs">Quick Settings</string>
     <string name="lockscreen_security">Lockscreen Security</string>
     <string name="heads_up">Heads Up Customisation</string>
-    <string name="volume">Volume Buttons</string>
+    <string name="vol_buttons">Volume Buttons</string>
     <string name="statusbar_clock">Clock Customisations</string>
     <string name="statusbar_battery">Battery Icon</string>
 
@@ -294,5 +294,8 @@
     <!-- Lock screen visualizer -->
     <string name="lockscreen_visualizer_title">Display music visualizer</string>
 
+   <!-- Partial screenshot -->
+    <string name="click_partial_screenshot_title">Click to partial screenshot</string>
+    <string name="click_partial_screenshot_summary">Short click Volume Down and Power to take partial screenshot</string>
 </resources>
 

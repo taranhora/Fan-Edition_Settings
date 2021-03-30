@@ -43,12 +43,18 @@
 	</PreferenceCategory>
 
 <PreferenceCategory
-            android:title="@string/buttons">
+            android:title="@string/vol_buttons">
              <com.android.settings.custom.preference.SystemSettingSwitchPreference
 	       android:key="volume_button_music_control"
 	       android:summary="@string/volume_rocker_music_controls_summary"
                android:title="@string/volume_rocker_music_controls_title"
 	       android:defaultValue="false" />
+
+	    <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:key="click_partial_screenshot"
+            android:title="@string/click_partial_screenshot_title"
+            android:summary="@string/click_partial_screenshot_summary"
+            android:defaultValue="false" />
     
              <com.android.settings.custom.preference.SystemSettingListPreference
 	    android:key="systemui_plugin_volume"
