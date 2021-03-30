@@ -291,5 +291,8 @@
     <string name="network_traffic_layout_v">Verticle</string>
     <string name="nettraf_font_size">Single net font size</string>
 
+    <!-- Lock screen visualizer -->
+    <string name="lockscreen_visualizer_title">Display music visualizer</string>
+
 </resources>
 
