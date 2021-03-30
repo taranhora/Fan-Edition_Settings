@@ -19,6 +19,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 	<PreferenceCategory
             android:title="@string/statusbar_icon">
+
+          <PreferenceScreen
+            android:title="@string/status_bar_system_icons_title"
+            android:summary="@string/status_bar_system_icons_summary">
+            <intent android:action="com.android.settings.action.STATUS_BAR_TUNER" />
+        </PreferenceScreen>
 	     
 	    <com.android.settings.custom.preference.SystemSettingSwitchPreference
         	android:key="show_volte_icon"
