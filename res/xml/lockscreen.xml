@@ -69,10 +69,10 @@
 
         <!-- FOD Customisations -->
         <Preference
-            android:key="fod_category"
+            android:key="fod_tweaks"
             android:title="@string/fod_title"
             android:summary="@string/fod_summary"
-            android:fragment="com.raven.lair.fragments.FODFragment" />
+            android:fragment="com.raven.lair.fragments.FodTweaks" /> 
 
         </PreferenceCategory>
 </PreferenceScreen>

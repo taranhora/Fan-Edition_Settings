@@ -27,13 +27,13 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class FODFragment extends SettingsPreferenceFragment {
+public class FodTweaks extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.fod);
+        addPreferencesFromResource(R.xml.fod_tweaks);
 
         getActivity().getActionBar().setTitle(R.string.fod_title);
     }
