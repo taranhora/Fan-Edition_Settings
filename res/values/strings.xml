@@ -47,6 +47,8 @@
     <string name="vol_buttons">Volume Buttons</string>
     <string name="statusbar_clock">Clock Customisations</string>
     <string name="statusbar_battery">Battery Icon</string>
+    <string name="gestures_title">Nav Bar Gesture Customisations</string>
+    <string name="gestures_summary">Take Your Pill</string>
 
     <!-- VoLTE switch -->
     <!-- 4G LTE switch -->
