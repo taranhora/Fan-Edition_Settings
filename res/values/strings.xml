@@ -343,4 +343,8 @@
     <string name="sb_height_medium">Medium</string>
     <string name="sb_height_large">Large</string>
     <string name="sb_height_extralarge">Extra Large</string>
+
+    <!-- Statusbar brightness control -->
+    <string name="status_bar_brightness_control_title">Statusbar Brightness Control</string>
+    <string name="status_bar_brightness_control_summary">Adjust brightness by sliding across statusbar</string>
 </resources>
