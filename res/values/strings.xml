@@ -69,6 +69,7 @@
     <string name="volte_icon_hd2">HD CAF Icon</string>
     <string name="volte_icon_miui">MIUI 11</string>
     <string name="volte_icon_emui">EMUI</string>
+    <string name="volte_icon_oss">OOS 10</string>
 
     <!-- VoWiFi icon -->
     <string name="vowifi_icon_title">VoWiFi icon</string>
@@ -329,7 +330,7 @@
     <string name="lock_screen_custom_clock_face_mnml_box">MNML (box)</string>
     <string name="lock_screen_custom_clock_face_mnml">MNML</string>
     <string name="lock_screen_custom_clock_face_fluid">Fluid</string>
-    <string name="lock_screen_custom_clock_face_shape">ShapeShift</string
+    <string name="lock_screen_custom_clock_face_shape">ShapeShift</string>
 
    <!-- gvisual mod -->
     <string name="gvisual_title">G-Visual Mod</string>
