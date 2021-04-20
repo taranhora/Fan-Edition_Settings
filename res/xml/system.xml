@@ -24,17 +24,17 @@
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:key="vibrate_on_connect"
             android:title="@string/incall_vibrate_connect_title"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:key="vibrate_on_callwaiting"
             android:title="@string/incall_vibrate_call_wait_title"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:key="vibrate_on_disconnect"
             android:title="@string/incall_vibrate_disconnect_title"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
     </PreferenceCategory>
 
     <!-- Gvisual mod -->
@@ -57,7 +57,7 @@
         android:key="notification_sound_vib_screen_on" 
         android:title="@string/notification_sound_vib_screen_on_title" 
         android:summary="@string/notification_sound_vib_screen_on_summary"
-        android:defaultValue="true" />
+        android:defaultValue="false" />
 
         <com.android.settings.custom.preference.GlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"

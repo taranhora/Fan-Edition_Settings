@@ -44,7 +44,7 @@
             <com.android.settings.custom.preference.SecureSettingSwitchPreference
             android:key="lockscreen_visualizer"
             android:title="@string/lockscreen_visualizer_title"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
 	    </PreferenceCategory>
 
